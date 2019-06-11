@@ -46,7 +46,7 @@ header div#logo img {
     left: 70px;
     transform: translate(0%, -50%);
     border-radius: 40px;
-    z-index: 5;
+    z-index: -1;
 }
 #search i {
     position: absolute;
@@ -154,6 +154,30 @@ main {
     box-sizing: border-box;
     height: calc(100vh - 65px);
     padding-bottom: 50px;
+}
+
+@media only screen and (max-height : 450px)  {
+    #menu {
+        overflow-y: scroll;
+        overflow-x:hidden;
+    }
+    /* width */
+    #menu::-webkit-scrollbar {
+        position:absolute;
+        width:5px;
+    }
+    /* Track */
+    #menu::-webkit-scrollbar-track {
+        position:absolute;  
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+    }
+    /* Handle */
+    #menu::-webkit-scrollbar-thumb {
+        position:absolute;
+        background: rgb(0, 170, 255);
+        border-radius: 5px;
+    }
 }
 #menu .text-menu {
     position: relative;
